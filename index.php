@@ -29,30 +29,23 @@
 <html lang="en">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<title></title>
-		<style>
-			body, html {
-                height: 100%;
-				margin: 0;
-				padding: 0;
-				width: 100%;
-			}
-			
-			a, img {
-				border: 0px none transparent;
-			}
-		</style>
-		<script>
-			function preloadNextImage() {
-				images = new Array();
-				images[<?php echo $nextpage; ?>] = new Image;
-				images[<?php echo $nextpage; ?>].src = "<?php echo $pages[$nextpage]; ?>";
-			}
-		</script>
+		<link rel="stylesheet" href="./static/style.css">
+
+        <title></title>
 	</head>
-	<body onload="preloadNextImage()">
+	<body>
 		<a href="index.php?page=<?php echo $nextpage; ?>">
             <img src="./<?php echo $dir . $pages[$page]; ?>" alt="" />
         </a>
+
+        <script>
+            function preloadNextImage() {
+                images = new Array();
+                images[<?php echo $nextpage; ?>] = new Image;
+                images[<?php echo $nextpage; ?>].src = "<?php echo $pages[$nextpage]; ?>";
+            }
+
+            preloadNextImage();
+        </script>
 	</body>
 </html>
