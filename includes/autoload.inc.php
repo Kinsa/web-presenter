@@ -7,7 +7,7 @@
  * the layout of this library is as follows:
  *	|-- includes
  * 	    |-- autoload.inc.php <-- YOU ARE HERE
- *  ...
+ *      ...
  * 	|-- lib
  * 	    |-- $class.php <-- THE CLASS FILE WE WANT TO AUTOLOAD
  * 
