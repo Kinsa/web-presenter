@@ -14,27 +14,26 @@
     $pages = $images->buildImageList(dirname(__FILE__) . '/' . $dir);
 
     if (isset($_GET['page']) && ($_GET['page'] >= 1) && ($_GET['page'] < sizeof($pages))):
-    	$page = $_GET['page'];
+        $page = $_GET['page'];
     else:
-    	$page = 0;
+        $page = 0;
     endif;
 
     $nextpage = $page + 1;
 
     if (empty($pages)) {
-    	exit();
+        exit();
     }
 ?>
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<link rel="stylesheet" href="./static/style.css">
-
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="./static/style.css">
         <title></title>
-	</head>
-	<body>
-		<a href="index.php?page=<?php echo $nextpage; ?>">
+    </head>
+    <body>
+        <a href="index.php?page=<?php echo $nextpage; ?>">
             <img src="./<?php echo $dir . $pages[$page]; ?>" alt="" />
         </a>
 
@@ -47,5 +46,5 @@
 
             preloadNextImage();
         </script>
-	</body>
+    </body>
 </html>
