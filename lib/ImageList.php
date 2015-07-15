@@ -10,7 +10,7 @@ class ImageList {
 			// Traverse the folder, and add filename to $found array if type matches
 			foreach ($contents as $item) {
 				$fileInfo = pathinfo($item);
-				if (array_key_exists('extension', $fileInfo) && in_array($fileInfo['extension'],$fileTypes)) {
+				if (array_key_exists('extension', $fileInfo) && in_array($fileInfo['extension'], $fileTypes)) {
 					$found[] = $item;
 				}
 			}
