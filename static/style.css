@@ -8,3 +8,16 @@ body, html {
 a, img {
     border: 0 none transparent;
 }
+
+/* Center each "page" in the middle of the browser window against a dark background */
+
+body {
+    background: #0a0a0a;
+    text-align: center;
+}
+
+img {
+    height: auto;
+    margin: 0 auto;
+    width: 1024px;
+}
